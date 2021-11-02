@@ -1,0 +1,5 @@
+name: Vehicle
+version: ${project.version}
+main: com.github.jasgo.vehicle.Vehicle
+api-version: 1.17
+authors: [ Jasgo ]
