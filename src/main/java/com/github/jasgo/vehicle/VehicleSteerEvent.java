@@ -2,10 +2,11 @@ package com.github.jasgo.vehicle;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class VehicleSteerEvent extends Event {
+public class VehicleSteerEvent extends Event implements Cancellable {
 
     private final Player player;
     private final Entity vehicle;
@@ -15,6 +16,7 @@ public class VehicleSteerEvent extends Event {
     private final boolean isRight;
     private final boolean isJump;
     private final boolean isShift;
+    private boolean isCanceled;
 
     public static HandlerList HANDLERS = new HandlerList();
 
@@ -67,5 +69,15 @@ public class VehicleSteerEvent extends Event {
 
     public boolean isShift() {
         return isShift;
+    }
+
+    @Override
+    public boolean isCancelled() {
+        return this.isCanceled;
+    }
+
+    @Override
+    public void setCancelled(boolean b) {
+        this.isCanceled = b;
     }
 }

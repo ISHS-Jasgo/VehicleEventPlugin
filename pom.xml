@@ -39,7 +39,6 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <outputFile>C:\Users\user\Desktop\마크서버\1.17.1\plugins\Vehicle.jar</outputFile>
                         </configuration>
                     </execution>
                 </executions>
